@@ -17,24 +17,24 @@
   <script>
   	(function () {
 		function toggleNames (name) {		
-				toggle(name, {
-					'jeremy': function () {
-						console.log('Jeremy rocks!');
-					}
-					
-					,'erikClone': 'erik'
-					,'erik': function () {
-						console.log('Erik smells nice.');
-					}
-					
-					,'cristina': function () {
-						console.log('Cristina is fun.');
-					}
+			toggle(name, {
+				'jeremy': function () {
+					console.log('Jeremy rocks!');
+				}
+			
+				,'erikClone': 'erik'
+				,'erik': function () {
+					console.log('Erik smells nice.');
+				}
+			
+				,'cristina': function () {
+					console.log('Cristina is fun.');
+				}
 
-					,'default': function () {
-						console.log('Oh my stars, you didn\'t specify anyone I recognize!');
-					}		
-				});	
+				,'default': function () {
+					console.log('Oh my stars, you didn\'t specify anyone I recognize!');
+				}		
+			});	
 		}
 
 		toggleNames('jeremy');
