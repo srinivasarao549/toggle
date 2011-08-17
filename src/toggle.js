@@ -8,7 +8,7 @@
 		
 		var specifiedPath;
 
-		if (paths[expression]) {	
+		if (paths[expression]) {
 			specifiedPath = paths[expression]; 
 		} else {
 			if (paths['default']) {
@@ -16,7 +16,12 @@
 			}
 		}
 		
-		return (specifiedPath || noop)();
+		if (typeof specifiedPath === 'string') {
+			return toggle(specifiedPath, paths);
+		} else {
+			// Otherwise we assume it is a Function.
+			return (specifiedPath || noop)();
+		}
 	}
 
 	if (!context.toggle) {
